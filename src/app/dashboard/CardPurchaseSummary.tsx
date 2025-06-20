@@ -12,7 +12,7 @@ import {
 } from "recharts";
 
 const CardPurchaseSummary = () => {
-  const { data:dashboardMetrics, isLoading } = useGetDashboardMetricsQuery();
+  const { data, isLoading } = useGetDashboardMetricsQuery();
   const purchaseData = data?.purchaseSummary || [];
 
   const lastDataPoint = purchaseData[purchaseData.length - 1] || null;
